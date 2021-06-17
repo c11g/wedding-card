@@ -114,8 +114,8 @@ const jsBable = () =>
   }))
   .pipe(dest(`${PATH.dist}/js`))
 
-  const dev = series(clean, sprite, parallel(html, css, js), assets);
-  const build = series(dev, parallel(cssPrefixer, jsBable), index, prettier);
+  const dev = series(clean, parallel(html, css), assets);
+  const build = series(dev, parallel(cssPrefixer), index, prettier);
   
   exports.build = build;
   exports.default = series(dev, serve);

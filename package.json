@@ -1,5 +1,5 @@
 {
-  "name": "gulp-ejs-scss-sprite-browsersync",
+  "name": "wedding-card",
   "version": "1.0.0",
   "description": "gulp ejs scss sprite browsersync template",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/c11g/gulp-ejs-scss-sprite-browsersync.git"
+    "url": "git+https://github.com/c11g/wedding-card.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/c11g/gulp-ejs-scss-sprite-browsersync/issues"
+    "url": "https://github.com/c11g/wedding-card/issues"
   },
-  "homepage": "https://github.com/c11g/gulp-ejs-scss-sprite-browsersync",
+  "homepage": "https://github.com/c11g/wedding-card",
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
