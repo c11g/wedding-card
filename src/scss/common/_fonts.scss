@@ -1,0 +1,16 @@
+/* noto-serif-kr-regular - latin_korean */
+@font-face {
+  font-family: 'notoserif';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/noto-serif-kr-v7-latin_korean-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../assets/fonts/noto-serif-kr-v7-latin_korean-regular.woff') format('woff'), /* Modern Browsers */
+}
+/* noto-serif-kr-500 - latin_korean */
+@font-face {
+  font-family: 'notoserif';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../assets/fonts/noto-serif-kr-v7-latin_korean-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../assets/fonts/noto-serif-kr-v7-latin_korean-500.woff') format('woff'), /* Modern Browsers */
+}
