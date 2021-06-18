@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="https://unpkg.com/@egjs/flicking/dist/flicking.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>모바일 청첩장</title>
+</head>
+
+<body>
+  <div class="root">
+    <div class="inner">
+      <div class="cover">
+        <div class="date">2021 / 06 / 27</div>
+        <div class="names"><span class="name">박진희</span> <i class="name_divider"></i> <span class="name">공경정</span></div>
+      </div>
+      <div id="carousel" class="flicking_viewport">
+        <div class="flicking-camera">
+          <div class="panel"><img src="https://via.placeholder.com/326x360/eee/333?text=1" width="163" height="180" alt=""></div>
+          <div class="panel"><img src="https://via.placeholder.com/326x360/eee/333?text=2" width="163" height="180" alt=""></div>
+          <div class="panel"><img src="https://via.placeholder.com/326x360/eee/333?text=3" width="163" height="180" alt=""></div>
+          <div class="panel"><img src="https://via.placeholder.com/326x360/eee/333?text=4" width="163" height="180" alt=""></div>
+          <div class="panel"><img src="https://via.placeholder.com/326x360/eee/333?text=5" width="163" height="180" alt=""></div>
+          <div class="panel"><img src="https://via.placeholder.com/326x360/eee/333?text=6" width="163" height="180" alt=""></div>
+        </div>
+        <div class="indicator" id="indicator"><i class="is_on"></i> <i></i> <i></i> <i></i> <i></i> <i></i></div>
+      </div>
+      <div class="text">
+        <p>안녕하세요.<br>신랑 박진희, 신부 공경정 입니다.</p>
+        <p>저희가 서로 사랑한지 500일,<br>그 뜻깊은 날에 결혼합니다.</p>
+        <p>살면서 도움이 될 조언과<br>격려의 말씀 부탁드립니다.</p>
+      </div><img class="flower_image" src="./assets/images/flower@2x.png" width="135" height="90" alt="">
+    </div>
+    <div class="form">
+      <div class="inner">
+        <form><textarea class="textarea" placeholder="메세지를 입력하세요"></textarea>
+          <div class="input_warp"><span class="from_text">from.</span> <input class="input" type="text" placeholder="홍길동"></div><button class="submit">저 장</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/@egjs/flicking/dist/flicking.pkgd.min.js" crossorigin="anonymous"></script>
+  <script>
+    const indicators = document.querySelectorAll("#indicator > i");
+    const flicking = new Flicking("#carousel", {
+      align: "prev",
+      circular: true,
+      bound: true,
+    });
+    flicking.on("changed", () => setIndicator(flicking.index));
+
+    function setIndicator(index) {
+      indicators.forEach(indicator => indicator.classList.remove("is_on"));
+      indicators[index].classList.add("is_on");
+    }
+  </script>
+</body>
+
+</html>
